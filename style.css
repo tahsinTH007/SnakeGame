@@ -1,0 +1,89 @@
+/* Import Google font - Poppins */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body{
+    background-color: #E3F2FD;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    
+}
+
+.wrapper{
+    height: 70vmin;
+    width: 65vmin;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    top: 100vh;
+    border-radius: 5px;
+    background: #293447;
+}
+
+.game-details {
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: white;
+    padding: 20px 27px;
+    display: flex;
+    user-select: none;
+    justify-content: space-between;
+}
+
+.game-bord{
+    height: 100%;
+    width: 100%;
+    display: grid;
+    grid-template: repeat(30, 1fr) / repeat(30, 1fr);
+    background: #212837;
+}
+
+.game-bord .food{
+    background: red;
+}
+.game-bord .head{
+    background: #60CBFF;
+}
+
+.control{
+    display: flex;
+    justify-content: space-between;
+    user-select: none;
+}
+
+.control i{
+    padding: 25px 0;
+    color: #fff;
+    align-items: center;
+    margin-left: 10%;
+    cursor: pointer;
+    font-size: 1.3rem;
+    width: calc(100% / 4);
+    border-right: 1px solid black;
+}
+
+@media screen and (max-width: 800px) { 
+    .wrapper{
+        width: 65vmin;
+        height: 70vmin;
+    }
+    .game-details{
+        font-size: 1rem;
+        padding: 15px 27px;
+    }
+    .control{
+        display: flex;
+    }
+
+    .control i{
+        padding: 15px 0;
+        font-size: 1rem;
+    }
+}
